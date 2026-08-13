@@ -110,10 +110,6 @@ Download the HTML file and open it in a modern web browser:
 
 Data_Analyst_Handbook_PRO.html
 
-# Data Analyst Handbook PRO
-
-No Python, Node.js, database, or web server is required for the basic version.
-
 ## 🎯 Target Audience
 This project is designed for:
 
