@@ -87,6 +87,7 @@ Match Found?
  YES       NO
   ↓         ↓
 Answer    Ollama
+```
 
 Internet access is not required for the core Handbook functionality.
 
@@ -107,7 +108,6 @@ No installation is required.
 
 Download the HTML file and open it in a modern web browser:
 
-```text
 Data_Analyst_Handbook_PRO.html
 
 # Data Analyst Handbook PRO
