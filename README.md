@@ -1,4 +1,4 @@
-# 📊 Data Analyst Handbook PRO (v15)
+# 📊 Data Analyst Handbook PRO 
 
 > **The ultimate interactive, offline-first reference, learning, and sandbox environment for Data Analytics & Engineering.**
 > Covers Python, NumPy, Pandas, SQL, Excel, DAX, Statistics, Visualization, and AI Engineering across 4 languages (RU / EN / DE / UA).
@@ -112,7 +112,6 @@
 
 ## 📄 License & Status
 
-- **Version:** `v15 PRO`
 - **Status:** Active Development
 - **License:** MIT License
 
