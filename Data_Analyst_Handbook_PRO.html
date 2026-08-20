@@ -227,6 +227,7 @@ footer{text-align:center;color:var(--muted);padding:30px}
   <div class="panel">
     <h2 data-i18n="compareTitle">Compare Mode</h2>
     <p class="muted" data-i18n="compareIntro">Выбери операцию — увидишь её реализацию во всех инструментах бок о бок.</p>
+    <input id="compareSearch" placeholder="Поиск: groupby, CALCULATE, XLOOKUP, JOIN..." oninput="populateCompare()">
     <select id="compareSelect" onchange="renderCompare()"></select>
   </div>
   <div id="compareCard" class="panel"></div>
@@ -413,23 +414,45 @@ function revealDebugFix(){
 
 function populateCompare(){
   const sel=document.getElementById('compareSelect');
-  sel.innerHTML=MATRIX.map((m,i)=>`<option value="${i}">${esc(m.cat)} — ${esc(m.op)}</option>`).join('');
+  const q=(document.getElementById('compareSearch')?.value||'').toLowerCase().trim();
+  const prevVal=sel.value;
+  const matrixItems=MATRIX.map((m,i)=>({key:'m:'+i,label:`${m.cat} — ${m.op}`,hay:(m.cat+' '+m.op).toLowerCase()}));
+  const libItems=COMMANDS.map(c=>({key:'c:'+c.id,label:`${c.module} — ${c.name}`,hay:(c.module+' '+c.name+' '+c.id).toLowerCase()}));
+  const filt=(arr)=>q?arr.filter(x=>x.hay.includes(q)):arr;
+  const mOpts=filt(matrixItems).map(x=>`<option value="${x.key}">${esc(x.label)}</option>`).join('');
+  const cOpts=filt(libItems).map(x=>`<option value="${x.key}">${esc(x.label)}</option>`).join('');
+  sel.innerHTML=`<optgroup label="Stack Matrix (${filt(matrixItems).length})">${mOpts}</optgroup><optgroup label="Command Library (${filt(libItems).length})">${cOpts}</optgroup>`;
+  if([...sel.options].some(o=>o.value===prevVal))sel.value=prevVal;
   renderCompare();
 }
 function renderCompare(){
-  const i=parseInt(document.getElementById('compareSelect').value||0,10);
-  const m=MATRIX[i];if(!m)return;
-  const d=m.desc?(m.desc[LANG]||m.desc.ru):'';
-  document.getElementById('compareCard').innerHTML=`<h3>${esc(m.cat)} → ${esc(m.op)}</h3><p class="muted">${esc(d)}</p>
+  const val=document.getElementById('compareSelect').value;
+  if(!val)return;
+  const [type,key]=val.split(':');
+  if(type==='m'){
+    const m=MATRIX[parseInt(key,10)];if(!m)return;
+    const d=m.desc?(m.desc[LANG]||m.desc.ru):'';
+    document.getElementById('compareCard').innerHTML=`<h3>${esc(m.cat)} → ${esc(m.op)}</h3><p class="muted">${esc(d)}</p>
+      <div class="compare-grid">
+        <div class="compare-col"><b>Python</b><code>${esc(m.py)}</code></div>
+        <div class="compare-col"><b>Pandas</b><code>${esc(m.pd)}</code></div>
+        <div class="compare-col"><b>SQL</b><code>${esc(m.sql)}</code></div>
+        <div class="compare-col"><b>Excel</b><code>${esc(m.ex)}</code></div>
+        <div class="compare-col"><b>DAX</b><code>${esc(m.dax)}</code></div>
+      </div>`;
+    return;
+  }
+  const c=COMMANDS.find(x=>x.id===key);if(!c)return;
+  document.getElementById('compareCard').innerHTML=`<h3>[${esc(c.id)}] ${esc(c.module)} → ${esc(c.name)}</h3><p class="muted">${esc(tr(c,'what'))}</p>
     <div class="compare-grid">
-      <div class="compare-col"><b>Python</b><code>${esc(m.py)}</code></div>
-      <div class="compare-col"><b>Pandas</b><code>${esc(m.pd)}</code></div>
-      <div class="compare-col"><b>SQL</b><code>${esc(m.sql)}</code></div>
-      <div class="compare-col"><b>Excel</b><code>${esc(m.ex)}</code></div>
-      <div class="compare-col"><b>DAX</b><code>${esc(m.dax)}</code></div>
-    </div>`;
+      <div class="compare-col"><b>${esc(c.module)}</b><code>${esc(c.syntax)}</code></div>
+      <div class="compare-col"><b>Excel</b><code>${esc(c.excel)}</code></div>
+      <div class="compare-col"><b>SQL</b><code>${esc(c.sql)}</code></div>
+      <div class="compare-col"><b>DAX</b><code>${esc(c.dax)}</code></div>
+      <div class="compare-col"><b>Pandas</b><code>${esc(c.pandas)}</code></div>
+    </div>
+    <p style="margin-top:10px"><b>${t('lErrors')}</b> ${esc(tr(c,'errors'))}</p>`;
 }
-
 function openPalette(){document.getElementById('cmdkOverlay').classList.add('open');document.getElementById('cmdkInput').value='';document.getElementById('cmdkInput').focus();renderPalette();}
 function closePalette(){document.getElementById('cmdkOverlay').classList.remove('open');}
 function renderPalette(){
@@ -1242,6 +1265,7 @@ function applyLang(){
   document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.getAttribute('data-i18n');el.textContent=t(key);});
   document.getElementById('cmdSearch').placeholder=LANG==='ru'?'Поиск: groupby, JOIN, CALCULATE, XLOOKUP, LTV...':LANG==='en'?'Search: groupby, JOIN, CALCULATE, XLOOKUP, LTV...':LANG==='de'?'Suche: groupby, JOIN, CALCULATE, XLOOKUP, LTV...':'Пошук: groupby, JOIN, CALCULATE, XLOOKUP, LTV...';
   document.getElementById('matrixSearch').placeholder=LANG==='ru'?'Фильтр: aggregation, join, rank, date, LTV...':LANG==='en'?'Filter: aggregation, join, rank, date, LTV...':LANG==='de'?'Filter: aggregation, join, rank, date, LTV...':'Фільтр: aggregation, join, rank, date, LTV...';
+  document.getElementById('compareSearch').placeholder=LANG==='ru'?'Поиск: groupby, CALCULATE, XLOOKUP, JOIN...':LANG==='en'?'Search: groupby, CALCULATE, XLOOKUP, JOIN...':LANG==='de'?'Suche: groupby, CALCULATE, XLOOKUP, JOIN...':'Пошук: groupby, CALCULATE, XLOOKUP, JOIN...';
   document.getElementById('aiQuery').placeholder=LANG==='ru'?'Например: как сделать JOIN в Pandas? или что такое CALCULATE?':LANG==='en'?'E.g.: how to JOIN in Pandas? or what is CALCULATE?':LANG==='de'?'Z. B.: Wie macht man JOIN in Pandas? oder was ist CALCULATE?':'Наприклад: як зробити JOIN у Pandas? або що таке CALCULATE?';
   renderLibrary();renderMatrix();renderCompare();renderDashboard();qbGenerate();
 }
