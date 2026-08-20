@@ -1,119 +1,665 @@
-# 📊 Data Analyst Handbook PRO 
+📊 Data Analyst Handbook PRO 2026
 
-> **The ultimate interactive, offline-first reference, learning, and sandbox environment for Data Analytics & Engineering.**
-> Covers Python, NumPy, Pandas, SQL, Excel, DAX, Statistics, Visualization, and AI Engineering across 4 languages (RU / EN / DE / UA).
+The ultimate interactive, offline-first reference, learning, practice, examination, and sandbox environment for Data Analytics, BI, Data Science, and AI Engineering.
 
----
+200+ analytical commands & functions • 260+ exam questions • 8 specialized exams + PRO Mixed Exam • Interactive Sandbox • Cross-Stack Matrix • Debug Mode • Practice Mode • Local AI • 4 languages
 
-## 🌟 Overview
+🌟 Overview
 
-**Data Analyst Handbook PRO** is an all-in-one, browser-based workspace designed for data analysts, analytics engineers, and data scientists. It provides an extensive command library, full cross-stack operation comparisons, interactive query builders, an in-browser live code sandbox (Python & SQL), interactive debug scenarios, adaptive testing with certificate generation, and local AI support — all packed into a clean, standalone, offline-first HTML application.
+Data Analyst Handbook PRO 2026 is an all-in-one, browser-based analytical learning and practice environment designed for:
 
----
+📊 Data Analysts
+📈 BI Analysts
+🧩 Product Analysts
+⚙️ Analytics Engineers
+🧠 Data Scientists
+🐍 Python / SQL Developers
+🎓 Students
+💼 Interview Candidates
 
-## 🔥 Key Features
+The Handbook combines a professional analytical command library with:
 
-### 📚 Command Library (193 Cards)
-- **Comprehensive Coverage:** Deep dive into Python, NumPy, Pandas, SQL, Excel, DAX, Data Cleaning, Statistics, and Visualization.
-- **Unified Standard Card Structure:** Every single command card is structured as:
-  `What` → `Why` → `Syntax` → `Example` → `Result` → `Errors` → `Analogues in Excel / SQL / DAX / Pandas`
-- **Smart UX:** Typo-tolerant instant search, multi-module filtering, and difficulty filters.
-- **Personalization:** 
-  - ⭐ **Favorites System:** Save frequently used commands and toggle "Show Favorites Only".
-  - 📝 **Personal Notes:** Add custom notes to any card (automatically persisted in your browser).
-- **Fully Multilingual:** Instant switcher across 🇷🇺 **Russian**, 🇬🇧 **English**, 🇩🇪 **German**, and 🇺🇦 **Ukrainian**.
+Interactive learning
+Cross-stack comparisons
+Practical exercises
+Python / Pandas execution
+SQL execution
+Debugging scenarios
+Specialized examinations
+Adaptive testing
+Progress tracking
+Printable certification
+Multilingual support
+Optional local AI assistance
 
----
+Everything is delivered through a standalone HTML application.
 
-### 🔄 Stack Matrix & ⚖️ Compare Mode
-- **60 Operations Side-by-Side:** Compare implementations seamlessly across **Python**, **Pandas**, **SQL**, **Excel**, and **DAX**.
-- **🤖 Dedicated AI Engineering Block:** Deep-dive cards & matrix entries for modern LLM stacks, including Embeddings, RAG, Autonomous Agents, Prompt Engineering, Guardrails, and Vector Search.
-- **⚖️ Interactive Compare Mode:** Select any operation from a dropdown to see its exact syntactical equivalent rendered side-by-side across every tool simultaneously.
-- **4-Language Descriptions:** Detailed breakdowns of each operation in all supported languages.
+🔒 Offline-First
 
----
+The core Handbook works locally in the browser and does not require:
 
-### 🧱 Query Builder
-- **Visual SQL & DAX Constructor:** Build queries intuitively by selecting tables, fields, aggregations, `WHERE` conditions, sorting, and `LIMIT`.
-- **Dual Output:** Simultaneously generates valid **SQL queries** and **DAX measures**.
-- **⚡ Direct Sandbox Execution:** Click **"Test in Sandbox"** to instantly push your generated query into the live SQLite engine for execution.
+Python backend
+Node.js
+npm
+Docker
+Database server
+Cloud backend
 
----
+Browser execution engines such as Pyodide and sql.js are loaded on demand when Sandbox functionality is used.
 
-### 💻 In-Browser Sandbox & 📈 Live Charts
-- **Real Execution Engines (Zero Setup):**
-  - **Python / Pandas:** Runs full Python code natively via **Pyodide** (WebAssembly).
-  - **SQL / SQLite:** Runs relational queries locally via **sql.js**.
-- **Custom Data Support:** Pre-loaded with demo dataset (`orders`, `customers`) or upload your own `.csv` files.
-- **On-Demand Engine Loading:** Heavy engines load from CDN *only when you click run*, keeping the initial app lightweight.
-- **📈 Native Live Charts:** Render Bar, Line, Pie, and Histogram charts directly on HTML5 Canvas without relying on bulky external visualization libraries.
+🔥 Key Features
+📚 200+ Command & Function Library
 
----
+The PRO Library contains 200+ analytical commands, functions, concepts, and operations covering:
 
-### 🐛 Debug Mode & 🧪 Practice
-- **🐛 Debug Mode:** 12 realistic "find the bug" scenarios covering Pandas, SQL, DAX, Excel, and Python errors across all 4 languages.
-- **🧪 Practice Mode:** Generate randomized hands-on analytical tasks filtered by topic with hidden collapsible solutions.
+🐍 Python
+🔢 NumPy
+🐼 Pandas
+🗄️ SQL
+📊 Excel
+⚡ DAX
+📈 Power BI
+📐 Statistics
+📉 Visualization
+💼 Business Analytics
+🤖 AI / RAG Concepts
+Unified Professional Structure
 
----
+Every command follows the same learning format:
 
-### 📝 PRO Exam & 🏆 Certification
-- **44 Adaptive Questions:** Evaluates full analytics mastery.
-- **Adaptive Difficulty Engine:** Dynamically adjusts question challenge based on performance (Correct → Harder, Incorrect → Easier).
-- **Spaced Repetition:** Smartly re-queues incorrectly answered questions more frequently.
-- **🏆 Print / PDF Certificate:** Automatically generates a formatted completion certificate upon passing.
+What
+↓
+Why
+↓
+Syntax
+↓
+Example
+↓
+Result
+↓
+Errors
+↓
+Excel Analogue
+↓
+SQL Analogue
+↓
+DAX Analogue
+↓
+Pandas Analogue
 
----
+This makes it possible to understand the same analytical operation across multiple technologies.
 
-### 📊 Progress Dashboard
-- Module-by-module completion tracking.
-- Identifies weak topics and tracks exam attempt history.
-- **Data Portability:** Full JSON **Export / Import** functionality to backup or transfer your learning progress across devices.
+🔄 Stack Matrix & Compare Mode
 
----
+The Cross-Stack Matrix provides 60+ analytical operations compared across:
 
-### 🤖 Local AI & ⌘K Smart Search
-- **Local Database First:** Instant fuzzy matching across the entire Library and Matrix.
-- **Local Ollama Integration:** Optional fallback to local Ollama LLMs with automatic CORS connection diagnosis and step-by-step setup assistance.
-- **⌘K / Ctrl+K Palette:** Quick-command palette for fast, keyboard-driven navigation across the whole app.
+Python
+Pandas
+SQL
+Excel
+DAX
 
----
+Examples include:
 
-## 🛠 Stack Comparison Matrix Preview
+Aggregation
+Filtering
+Joining
+Ranking
+Missing-value handling
+Transformation
+Analytical calculations
+⚖️ Interactive Compare Mode
 
-| Operation | Python | Pandas | SQL | Excel | DAX |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Aggregation** | `sum()` / `len()` | `df.groupby().agg()` | `GROUP BY` / `SUM()` | Pivot Tables / `SUMIFS` | `SUMMARIZE()` / `CALCULATE()` |
-| **Filtering** | `[x for x in data if ...]` | `df.query()` / `df[...]` | `WHERE` / `HAVING` | Filter / `FILTER()` | `FILTER()` / `CALCULATE()` |
-| **Joining Data** | `dict` merges / `zip` | `pd.merge()` / `join()` | `INNER / LEFT JOIN` | `XLOOKUP()` / `VLOOKUP()` | `RELATED()` / Relationships |
-| **Ranking** | `sorted(key=...)` | `df['col'].rank()` | `ROW_NUMBER() OVER()` | `RANK.EQ()` | `RANKX()` |
-| **Null Handling**| `None` / `math.isnan` | `df.fillna()` / `isna()` | `COALESCE()` / `IS NULL` | `IFERROR()` / `ISBLANK()`| `COALESCE()` / `ISBLANK()` |
-| **AI / RAG** | `openai` / `langchain` | Vector Embeddings | Vector DB Extensions | Excel AI Formulas | Custom DAX AI Metrics |
+Select an operation and view its implementation side-by-side across multiple technologies.
 
----
+One analytical problem → multiple technology solutions.
 
-## 💻 Tech Stack & Architecture
+🤖 AI Engineering Module
 
-- **Frontend:** Pure Vanilla HTML5, CSS3, JavaScript (ES6+).
-- **Styling:** Custom CSS with Light/Dark theme engine, high contrast palettes, and print optimization (`@media print`).
-- **Wasm Engines (CDN On-Demand):** Pyodide (Python/Pandas) & sql.js (SQLite).
-- **Storage:** LocalStorage API for offline persistence (Notes, Favorites, Progress, Themes).
+The Handbook also includes concepts related to modern AI Engineering and LLM applications:
 
----
+Embeddings
+RAG
+Vector Search
+Prompt Engineering
+Agents
+Guardrails
+LLM Workflows
 
-## 🚀 Quick Start
+These concepts extend the Handbook beyond traditional Data Analytics into modern AI-assisted analytics.
 
-1. Clone or download the repository.
-2. Open `index.html` (or `Data_Analyst_Handbook_PRO.html`) in any modern browser (Chrome, Firefox, Edge, Safari).
-3. **No server, npm install, or Python backend setup required!**
+🧱 Query Builder
+Visual SQL & DAX Constructor
 
-> ℹ️ *Note: Internet access is only required during the first click of Sandbox execution to load Pyodide/sql.js engines, or when connecting to local Ollama instances.*
+Build analytical queries using:
 
----
+Tables
+Columns
+Aggregations
+Filters
+Conditions
+Sorting
+LIMIT
+Dual Output
 
-## 📄 License & Status
+The Query Builder can generate:
 
-- **Status:** Active Development
-- **License:** MIT License
+SQL
 
----
-⭐ **If you find this handbook useful, don't forget to star the repository!**
+and:
+
+DAX
+
+outputs.
+
+⚡ Sandbox Integration
+
+Generated SQL can be sent directly to the local SQL Sandbox for testing.
+
+💻 In-Browser Sandbox
+
+The Handbook includes a real browser-based analytical execution environment.
+
+🐍 Python / Pandas
+
+Python and Pandas execution is powered by Pyodide / WebAssembly.
+
+Users can execute analytical Python code directly in the browser.
+
+🗄️ SQL / SQLite
+
+SQL execution is powered by sql.js / SQLite.
+
+Users can execute SQL queries against local datasets.
+
+📁 Custom CSV Data
+
+The Sandbox supports:
+
+Demo datasets
+orders
+customers
+User-uploaded .csv files
+⚡ On-Demand Loading
+
+Heavy execution engines are loaded only when required, helping keep the initial application lightweight.
+
+📈 Live Visualization
+
+The application supports interactive charts including:
+
+📊 Bar Chart
+📈 Line Chart
+🥧 Pie Chart
+📉 Histogram
+
+Charts are rendered directly in the browser.
+
+🐛 Debug Mode
+
+Debug Mode provides realistic analytical debugging scenarios covering:
+
+Python
+Pandas
+SQL
+DAX
+Excel
+Data Quality
+
+The learning process follows:
+
+Error
+↓
+Identify Cause
+↓
+Fix
+↓
+Correct Code
+↓
+Explanation
+🧪 Practice Mode
+
+Practice Mode generates randomized analytical tasks.
+
+Tasks can be filtered by:
+
+Technology
+Topic
+Difficulty
+Analytical area
+
+Each task can contain:
+
+Problem
+↓
+Input / Data
+↓
+Expected Result
+↓
+Solution
+↓
+Explanation
+
+Solutions can be hidden until the learner is ready to check the answer.
+
+🎓 PRO Examination Center
+
+The PRO version contains an examination bank with 260+ questions.
+
+The examination system includes 8 specialized exams + 1 PRO Mixed Exam.
+
+🐍 Python Exam
+
+Covers:
+
+Python fundamentals
+Data types
+Collections
+Functions
+Comprehensions
+Exceptions
+Data processing
+Analytical programming
+🐼 Pandas Exam
+
+Covers:
+
+DataFrames
+Filtering
+Grouping
+Aggregation
+Merging
+Missing values
+Reshaping
+Time series
+Rolling calculations
+🗄️ SQL Exam
+
+Covers:
+
+SELECT
+WHERE
+GROUP BY
+HAVING
+JOIN
+CASE
+NULL handling
+CTE
+Window Functions
+Ranking
+Analytical queries
+📊 Excel Exam
+
+Covers:
+
+Formulas
+Lookup functions
+Conditional calculations
+Dynamic arrays
+Pivot Tables
+Data cleaning
+Analytical formulas
+⚡ DAX Exam
+
+Covers:
+
+Measures
+Calculated Columns
+CALCULATE
+Filter Context
+FILTER
+ALL
+VALUES
+Iterators
+Time Intelligence
+Ranking
+📐 Statistics Exam
+
+Covers:
+
+Mean
+Median
+Variance
+Standard Deviation
+Percentiles
+IQR
+Z-score
+Correlation
+Hypothesis Testing
+p-value
+Confidence Intervals
+A/B Testing
+📈 Power BI Exam
+
+Covers:
+
+Data Modeling
+Star Schema
+Relationships
+Measures
+Calculated Columns
+Filter Context
+Slicers
+Drill-through
+Bookmarks
+Row-Level Security
+Dashboard Design
+💼 Business Analytics Exam
+
+Covers:
+
+Revenue
+Orders
+AOV
+ARPU
+CAC
+LTV
+Retention
+Conversion
+Growth
+Profit
+Margin
+Unit Economics
+🏆 PRO Mixed Exam
+
+A comprehensive examination combining questions from the complete analytical stack:
+
+Python
+Pandas
+SQL
+Excel
+DAX
+Statistics
+Power BI
+Business Analytics
+🧠 Adaptive Examination Engine
+
+The examination system supports:
+
+Randomized questions
+Multiple difficulty levels
+Automatic answer checking
+Explanations
+Score calculation
+Weak-topic identification
+Exam history
+Repeated attempts
+Adaptive difficulty
+Example Scoring
+Score	Level
+90–100%	🏆 Data Analyst PRO
+80–89%	🥇 Advanced
+70–79%	🥈 Middle
+60–69%	🥉 Junior
+<60%	🔄 Retake
+🏆 Certification
+
+After completing the required examination, the application can generate a printable completion certificate.
+
+Certificate information can include:
+
+Candidate
+Examination
+Score
+Level
+Date
+Completion Status
+📊 Progress Dashboard
+
+Track learning and examination progress across the Handbook.
+
+Features include:
+
+Module completion
+Exam history
+Scores
+Weak topics
+Practice progress
+Favorites
+Personal notes
+Learning statistics
+💾 Data Portability
+
+Progress can be exported and imported as JSON.
+
+This allows users to:
+
+Create backups
+Transfer progress
+Restore learning data
+Move between browsers or devices
+🤖 Local AI
+
+The Handbook supports optional integration with Ollama.
+
+Architecture:
+
+Handbook
+    ↓
+Local Search
+    ↓
+Local Knowledge Base
+    ↓
+Ollama
+    ↓
+Local LLM
+
+The AI layer is optional and does not replace the core Handbook functionality.
+
+🔎 Smart Search & Command Palette
+
+Use:
+
+Ctrl + K
+
+or:
+
+⌘ + K
+
+to open the command palette.
+
+Search across:
+
+Commands
+Functions
+Modules
+Concepts
+Matrix operations
+Analytical topics
+
+The search supports fast local fuzzy matching and common typing variations.
+
+🌍 Multilingual Interface
+
+The Handbook supports four languages:
+
+🇬🇧 English
+🇷🇺 Russian
+🇩🇪 German
+🇺🇦 Ukrainian
+
+Language switching is available directly inside the application.
+
+🛠️ Technology Stack
+Layer	Technology
+Frontend	HTML5
+Styling	CSS3
+Application Logic	Vanilla JavaScript ES6+
+Python Engine	Pyodide / WebAssembly
+Data Analysis	Python / Pandas
+SQL Engine	sql.js / SQLite
+Storage	LocalStorage API
+Visualization	HTML5 Canvas
+Optional Local AI	Ollama
+🏗️ Architecture
+HTML5
+CSS3
+JavaScript ES6+
+│
+├── LocalStorage
+│   ├── Favorites
+│   ├── Notes
+│   ├── Progress
+│   └── Settings
+│
+├── Pyodide
+│   └── Python / Pandas
+│
+├── sql.js
+│   └── SQLite
+│
+├── Canvas
+│   └── Live Charts
+│
+└── Optional Ollama
+    └── Local AI
+🚀 Quick Start
+Option 1 — Download
+
+Download the HTML application and open it in a modern browser.
+
+Supported browsers include:
+
+Chrome
+Edge
+Firefox
+Safari
+Opera
+Option 2 — Clone the Repository
+git clone https://github.com/YOUR-USERNAME/data-analyst-handbook-pro.git
+
+Open the project folder and launch:
+
+index.html
+🌐 GitHub Pages
+
+The project can be deployed as a static GitHub Pages application.
+
+GitHub Repository
+        ↓
+GitHub Pages
+        ↓
+Web Browser
+        ↓
+Data Analyst Handbook PRO
+
+The core application does not require backend hosting.
+
+⚠️ Browser & Internet Note
+
+The Handbook is designed as an offline-first application.
+
+However, the browser Sandbox may require Internet access the first time Python/Pandas or SQL execution engines are loaded because Pyodide and sql.js are loaded on demand from CDN resources.
+
+Optional Ollama functionality requires a locally running Ollama service.
+
+🎯 Target Audience
+Data Analysts
+
+Python • Pandas • SQL • Excel • Power BI • DAX
+
+BI Professionals
+
+Power BI • DAX • Data Models • KPIs • Dashboards
+
+Data Scientists
+
+Python • NumPy • Statistics • Data Preparation
+
+Analytics Engineers
+
+SQL • Data Transformation • Analytical Modeling
+
+Students
+
+Structured learning, practice, and examination preparation.
+
+Interview Candidates
+
+Preparation for:
+
+SQL interviews
+Python interviews
+Pandas interviews
+Power BI interviews
+DAX interviews
+Data Analyst case studies
+📌 Project Status
+
+Version: Data Analyst Handbook PRO 2026
+Status: Active Development
+Architecture: Standalone HTML
+Core: Offline-First
+License: MIT
+
+🗺️ Roadmap
+✅ Completed
+ 200+ analytical commands
+ Unified command structure
+ Cross-Stack Matrix
+ 60+ comparison operations
+ Python / Pandas Sandbox
+ SQL Sandbox
+ Query Builder
+ Practice Mode
+ Debug Mode
+ 260+ examination questions
+ Python Exam
+ Pandas Exam
+ SQL Exam
+ Excel Exam
+ DAX Exam
+ Statistics Exam
+ Power BI Exam
+ Business Analytics Exam
+ PRO Mixed Exam
+ Progress Dashboard
+ Certification
+ Multilingual Interface
+ Local AI / Ollama Integration
+ Offline-First Architecture
+🔮 Future
+ 300+ analytical commands
+ 500+ examination questions
+ More real-world datasets
+ Advanced SQL case studies
+ Advanced DAX challenges
+ Power BI modeling challenges
+ Product Analytics Laboratory
+ A/B Testing Laboratory
+ Unit Economics Laboratory
+ AI Analytics Laboratory
+💡 Why Data Analyst Handbook PRO?
+
+Most Data Analyst resources teach technologies separately.
+
+This Handbook takes a different approach:
+
+Learn the analytical problem first — then learn how Python, Pandas, SQL, Excel and DAX solve it.
+
+The result is a single environment that can serve as:
+
+📚 Daily analytical reference
+🎓 Learning platform
+🧪 Practice environment
+💻 Browser-based coding sandbox
+🐛 Debugging trainer
+🎯 Interview preparation tool
+📝 Examination platform
+🏆 Certification environment
+🤖 Local AI learning assistant
+⭐ Support the Project
+
+If Data Analyst Handbook PRO helps you learn, practice, or work with data, please consider giving the repository a ⭐.
+
+📄 License
+
+This project is released under the MIT License.
+
+See LICENSE for details.
+
+🚀 Data Analyst Handbook PRO 2026
+
+Learn. Practice. Analyze. Debug. Examine. Build.
+
+One analytical problem. Multiple technologies. One professional Handbook.
