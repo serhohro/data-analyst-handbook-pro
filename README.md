@@ -1,119 +1,152 @@
-# 📊 Data Analyst Handbook PRO 
+﻿# 📊 Data Analyst Handbook PRO 
 
-> **The ultimate interactive, offline-first reference, learning, and sandbox environment for Data Analytics & Engineering.**
-> Covers Python, NumPy, Pandas, SQL, Excel, DAX, Statistics, Visualization, and AI Engineering across 4 languages (RU / EN / DE / UA).
+> **An offline-first, single-file reference, practice, examination, and sandbox environment for Data Analytics, BI, and AI Engineering.**
+
+**193 Commands** · **60 Cross-Stack Operations** · **44-Question Adaptive Exam** · **Python/Pandas + SQL Sandbox** · **Query Builder** · **Live Charts** · **4 Languages**
 
 ---
 
 ## 🌟 Overview
 
-**Data Analyst Handbook PRO** is an all-in-one, browser-based workspace designed for data analysts, analytics engineers, and data scientists. It provides an extensive command library, full cross-stack operation comparisons, interactive query builders, an in-browser live code sandbox (Python & SQL), interactive debug scenarios, adaptive testing with certificate generation, and local AI support — all packed into a clean, standalone, offline-first HTML application.
+**Data Analyst Handbook PRO ** is a single self-contained HTML file that works as an all-in-one environment for learning, practicing, and referencing modern data analytics tools — no install, no server, no build step.
+
+Useful for:
+
+- 📊 Data Analysts & BI Analysts
+- 🧠 Data Scientists
+- 🐍 Python / SQL developers
+- 🎓 Students preparing for a Data Analyst role
+- 💼 Interview candidates
+
+Everything — the command reference, sandboxes, exam bank, and your personal progress — lives in **one `.html` file** and your browser's `localStorage`.
 
 ---
 
-## 🔥 Key Features
+## 🔥 Features
 
-### 📚 Command Library (193 Cards)
-- **Comprehensive Coverage:** Deep dive into Python, NumPy, Pandas, SQL, Excel, DAX, Data Cleaning, Statistics, and Visualization.
-- **Unified Standard Card Structure:** Every single command card is structured as:
-  `What` → `Why` → `Syntax` → `Example` → `Result` → `Errors` → `Analogues in Excel / SQL / DAX / Pandas`
-- **Smart UX:** Typo-tolerant instant search, multi-module filtering, and difficulty filters.
-- **Personalization:** 
-  - ⭐ **Favorites System:** Save frequently used commands and toggle "Show Favorites Only".
-  - 📝 **Personal Notes:** Add custom notes to any card (automatically persisted in your browser).
-- **Fully Multilingual:** Instant switcher across 🇷🇺 **Russian**, 🇬🇧 **English**, 🇩🇪 **German**, and 🇺🇦 **Ukrainian**.
+### 📚 Command Library — 193 cards
+Covers Python, NumPy, Pandas, SQL, Excel, DAX/Power BI, Data Cleaning, Statistics, and Visualization. Every card follows the same structure:
 
----
+```
+What it does → Why an analyst needs it → Syntax → Example → Result → Common Errors → Excel / SQL / DAX / Pandas analogues
+```
 
-### 🔄 Stack Matrix & ⚖️ Compare Mode
-- **60 Operations Side-by-Side:** Compare implementations seamlessly across **Python**, **Pandas**, **SQL**, **Excel**, and **DAX**.
-- **🤖 Dedicated AI Engineering Block:** Deep-dive cards & matrix entries for modern LLM stacks, including Embeddings, RAG, Autonomous Agents, Prompt Engineering, Guardrails, and Vector Search.
-- **⚖️ Interactive Compare Mode:** Select any operation from a dropdown to see its exact syntactical equivalent rendered side-by-side across every tool simultaneously.
-- **4-Language Descriptions:** Detailed breakdowns of each operation in all supported languages.
+Includes search (typo-tolerant), filters by module/difficulty, ⭐ favorites, and personal notes per card.
 
----
+### 🔄 Cross-Stack Matrix — 60 operations
+One analytical operation shown side-by-side across Python / Pandas / SQL / Excel / DAX, including a dedicated **AI Engineering** block (embeddings, RAG, vector search, agents, prompt engineering, guardrails).
+
+### ⚖️ Compare Mode — 253 items
+Pick any operation from the Matrix **or any of the 193 Library commands** and see its implementation across every tool at once, with a live search filter.
 
 ### 🧱 Query Builder
-- **Visual SQL & DAX Constructor:** Build queries intuitively by selecting tables, fields, aggregations, `WHERE` conditions, sorting, and `LIMIT`.
-- **Dual Output:** Simultaneously generates valid **SQL queries** and **DAX measures**.
-- **⚡ Direct Sandbox Execution:** Click **"Test in Sandbox"** to instantly push your generated query into the live SQLite engine for execution.
+Assemble a SQL query visually (table → fields → aggregation → WHERE → sort → LIMIT) and get a matching SQL query and DAX measure generated simultaneously. One click sends the query to the SQL Sandbox to actually run it.
 
----
+### 💻 In-Browser Sandbox
+- **Python / Pandas** via Pyodide (WebAssembly) — real code execution
+- **SQL** via sql.js (SQLite compiled to WebAssembly)
+- Built-in demo tables (`orders`, `customers`) or upload your own CSV
+- Engines load from CDN only when you open the Sandbox tab — the file itself stays lightweight
 
-### 💻 In-Browser Sandbox & 📈 Live Charts
-- **Real Execution Engines (Zero Setup):**
-  - **Python / Pandas:** Runs full Python code natively via **Pyodide** (WebAssembly).
-  - **SQL / SQLite:** Runs relational queries locally via **sql.js**.
-- **Custom Data Support:** Pre-loaded with demo dataset (`orders`, `customers`) or upload your own `.csv` files.
-- **On-Demand Engine Loading:** Heavy engines load from CDN *only when you click run*, keeping the initial app lightweight.
-- **📈 Native Live Charts:** Render Bar, Line, Pie, and Histogram charts directly on HTML5 Canvas without relying on bulky external visualization libraries.
+### 📈 Live Charts
+Bar, Line, Pie, and Histogram charts rendered on plain HTML5 Canvas from the demo dataset — no charting library required.
 
----
+### 🐛 Debug Mode
+12 "find the bug" scenarios across Pandas, SQL, DAX, Excel, and Python, each with a revealed fix and explanation.
 
-### 🐛 Debug Mode & 🧪 Practice
-- **🐛 Debug Mode:** 12 realistic "find the bug" scenarios covering Pandas, SQL, DAX, Excel, and Python errors across all 4 languages.
-- **🧪 Practice Mode:** Generate randomized hands-on analytical tasks filtered by topic with hidden collapsible solutions.
+### 🧪 Practice Mode
+Random task generator pulling from the Command Library, with the solution hidden until you're ready to check it.
 
----
-
-### 📝 PRO Exam & 🏆 Certification
-- **44 Adaptive Questions:** Evaluates full analytics mastery.
-- **Adaptive Difficulty Engine:** Dynamically adjusts question challenge based on performance (Correct → Harder, Incorrect → Easier).
-- **Spaced Repetition:** Smartly re-queues incorrectly answered questions more frequently.
-- **🏆 Print / PDF Certificate:** Automatically generates a formatted completion certificate upon passing.
-
----
+### 🎓 PRO Exam
+- 44 questions covering SQL, DAX, Pandas, Excel, Python, NumPy, Statistics, Visualization, Data Cleaning, and Business Analytics
+- **Adaptive difficulty** — a correct answer raises the difficulty of the next question, a wrong one lowers it
+- **Spaced repetition** — questions you got wrong come back more often on your next attempt
+- Score, level (Junior → PRO), and history saved automatically
+- 🏆 Printable certificate on completion
 
 ### 📊 Progress Dashboard
-- Module-by-module completion tracking.
-- Identifies weak topics and tracks exam attempt history.
-- **Data Portability:** Full JSON **Export / Import** functionality to backup or transfer your learning progress across devices.
+Accuracy by module, weak-topic detection, full attempt history, and one-click **export/import of your progress as JSON** (backup or move between devices).
+
+### 🤖 Smart Search + Optional Local AI
+Searches the local Library and Matrix first (with typo tolerance). If nothing is found, you can optionally query a **locally running Ollama** instance — no data ever leaves your machine, and no internet is required beyond the initial page load.
+
+### 🔎 Command Palette
+`Ctrl+K` / `⌘K` opens an instant fuzzy search across the entire Library and Matrix from anywhere in the app.
+
+### 🌍 Multilingual
+Full interface, Library content, Matrix descriptions, and Exam questions are available in:
+
+| | |
+|---|---|
+| 🇬🇧 | English |
+| 🇷🇺 | Russian |
+| 🇩🇪 | German |
+| 🇺🇦 | Ukrainian |
+
+### 🎨 Other
+- 🌙 / ☀️ Dark and light themes (with proper contrast in both)
+- 🖨️ Print / export the whole handbook to PDF via the browser print dialog
+- A short onboarding tour on first launch
 
 ---
 
-### 🤖 Local AI & ⌘K Smart Search
-- **Local Database First:** Instant fuzzy matching across the entire Library and Matrix.
-- **Local Ollama Integration:** Optional fallback to local Ollama LLMs with automatic CORS connection diagnosis and step-by-step setup assistance.
-- **⌘K / Ctrl+K Palette:** Quick-command palette for fast, keyboard-driven navigation across the whole app.
+## 🛠️ Technology Stack
 
----
-
-## 🛠 Stack Comparison Matrix Preview
-
-| Operation | Python | Pandas | SQL | Excel | DAX |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Aggregation** | `sum()` / `len()` | `df.groupby().agg()` | `GROUP BY` / `SUM()` | Pivot Tables / `SUMIFS` | `SUMMARIZE()` / `CALCULATE()` |
-| **Filtering** | `[x for x in data if ...]` | `df.query()` / `df[...]` | `WHERE` / `HAVING` | Filter / `FILTER()` | `FILTER()` / `CALCULATE()` |
-| **Joining Data** | `dict` merges / `zip` | `pd.merge()` / `join()` | `INNER / LEFT JOIN` | `XLOOKUP()` / `VLOOKUP()` | `RELATED()` / Relationships |
-| **Ranking** | `sorted(key=...)` | `df['col'].rank()` | `ROW_NUMBER() OVER()` | `RANK.EQ()` | `RANKX()` |
-| **Null Handling**| `None` / `math.isnan` | `df.fillna()` / `isna()` | `COALESCE()` / `IS NULL` | `IFERROR()` / `ISBLANK()`| `COALESCE()` / `ISBLANK()` |
-| **AI / RAG** | `openai` / `langchain` | Vector Embeddings | Vector DB Extensions | Excel AI Formulas | Custom DAX AI Metrics |
-
----
-
-## 💻 Tech Stack & Architecture
-
-- **Frontend:** Pure Vanilla HTML5, CSS3, JavaScript (ES6+).
-- **Styling:** Custom CSS with Light/Dark theme engine, high contrast palettes, and print optimization (`@media print`).
-- **Wasm Engines (CDN On-Demand):** Pyodide (Python/Pandas) & sql.js (SQLite).
-- **Storage:** LocalStorage API for offline persistence (Notes, Favorites, Progress, Themes).
+| Layer | Technology |
+|---|---|
+| Structure | HTML5 |
+| Styling | CSS3 (custom properties for theming) |
+| Logic | Vanilla JavaScript (ES6+), no framework |
+| Python engine | Pyodide (WebAssembly), loaded on demand |
+| SQL engine | sql.js (SQLite via WebAssembly), loaded on demand |
+| Storage | Browser `localStorage` |
+| Charts | HTML5 Canvas |
+| Optional local AI | Ollama (`localhost:11434`) |
 
 ---
 
 ## 🚀 Quick Start
 
-1. Clone or download the repository.
-2. Open `index.html` (or `Data_Analyst_Handbook_PRO.html`) in any modern browser (Chrome, Firefox, Edge, Safari).
-3. **No server, npm install, or Python backend setup required!**
+1. Download the `.html` file.
+2. Open it in any modern browser (Chrome, Edge, Firefox, Safari).
 
-> ℹ️ *Note: Internet access is only required during the first click of Sandbox execution to load Pyodide/sql.js engines, or when connecting to local Ollama instances.*
+That's it — no Python, Node.js, npm, or backend server needed for the core Handbook.
+
+### Optional: Sandbox engines
+The Python and SQL Sandboxes fetch Pyodide / sql.js from a CDN **the first time** you open them (a few MB). After that first load in a session, everything runs locally in the browser.
+
+### Optional: Local AI (Ollama)
+To use the "Ask Ollama" fallback in Smart Search:
+```bash
+OLLAMA_ORIGINS="*" ollama serve
+```
+This is required because the app is opened as a local file (`file://`), and Ollama blocks cross-origin requests by default.
 
 ---
 
-## 📄 License & Status
+## ⚠️ Honest Limitations
 
-- **Status:** Active Development
-- **License:** MIT License
+- **Not a hosted app.** There's no `git clone` / server / GitHub Pages deployment — it's a single portable HTML file you open directly.
+- **Not installable as a PWA.** True "Install as App" behavior requires a `manifest.json` + Service Worker served over `http(s)`, which isn't possible from a local `file://` HTML file. If you host this file yourself (e.g. GitHub Pages, Netlify), a PWA wrapper becomes feasible as a separate addition.
+- **One exam, not eight.** There is a single 44-question PRO exam pulling from all modules with adaptive difficulty — not separate per-technology exam tracks.
+- Sandboxes and Ollama require internet / a local service respectively; the rest of the app works fully offline.
 
 ---
-⭐ **If you find this handbook useful, don't forget to star the repository!**
+
+## 🗺️ Roadmap Ideas
+
+- Grow the Library beyond 193 commands
+- Expand the exam bank beyond 44 questions
+- Additional real-world datasets in the Sandbox
+- Gamification (streaks, badges) — intentionally left out of the current version
+
+---
+
+## 📄 License
+
+MIT — see `LICENSE` for details.
+
+---
+
+**Learn. Practice. Debug. Examine. Build.**
+One analytical problem, five technologies, one file.
